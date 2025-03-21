@@ -1,6 +1,6 @@
 import type { ApiResponse } from "./api-types"
 import type { DiscoveryFeedResponse, DiscoveryFeedRequest } from "./recommendation-types"
-import { ApiClient } from "./api-client"
+import { ApiClient } from "./api-client-crud"
 
 // Define RecommendationItem type
 interface RecommendationItem {

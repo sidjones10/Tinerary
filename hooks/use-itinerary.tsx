@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ApiClient } from "@/lib/api-client"
+import { ApiClient } from "@/lib/api-client-crud"
 import type { Itinerary, Activity, CreateItineraryRequest, UpdateItineraryRequest } from "@/lib/api-types"
 
 export function useItinerary(initialItinerary?: Itinerary) {

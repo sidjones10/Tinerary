@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useAuth } from "@/hooks/use-auth"
 import { useItinerary } from "@/hooks/use-itinerary"
-import { ApiClient } from "@/lib/api-client"
+import { ApiClient } from "@/lib/api-client-crud"
 import type { Deal } from "@/lib/api-types"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"

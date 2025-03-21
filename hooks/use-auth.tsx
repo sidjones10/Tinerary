@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
-import { ApiClient } from "@/lib/api-client"
+import { ApiClient } from "@/lib/api-client-crud"
 import type { User, LoginRequest, RegisterRequest } from "@/lib/api-types"
 
 interface AuthContextType {
