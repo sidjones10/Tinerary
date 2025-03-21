@@ -29,7 +29,7 @@ import type {
 const API_URL =
   typeof process !== "undefined" && process.env.NEXT_PUBLIC_API_URL
     ? process.env.NEXT_PUBLIC_API_URL
-    : "https://api.tinerary.app/v1"
+    : "https://v0-itinerary-app-safies-projects-9d3baf77.vercel.app/"
 
 // Helper function to handle API responses
 async function handleResponse<T>(response: Response): Promise<ApiResponse<T>> {
