@@ -6,7 +6,6 @@
 import { revalidatePath } from "next/cache"
 import { PromotionAPI } from "@/lib/api-client-crud"
 import type { CreatePromotionInput, CreateBookingInput } from "@/lib/api-client-crud"
-import Stripe from "stripe"
 import { generateQRCode } from "@/lib/qr-generator"
 import { sendTicketEmail } from "@/lib/email-service"
 import { createClient } from "@supabase/supabase-js"
