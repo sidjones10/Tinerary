@@ -86,6 +86,8 @@ export class ApiClient {
 
     const result = await handleResponse<AuthResponse>(response)
 
+    
+
     // Store token if login successful
     if (result.data?.token) {
       localStorage.setItem("auth_token", result.data.token)
