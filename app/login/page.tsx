@@ -5,8 +5,6 @@ import type React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import { ArrowLeft, Mail, Phone } from "lucide-react"
-import { supabase } from "@/app/supabase/supabase-js" // Import your Supabase client
-
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -21,40 +19,23 @@ export default function LoginPage() {
   const [password, setPassword] = useState("")
   const [showPhoneVerification, setShowPhoneVerification] = useState(false)
 
-  const handlePhoneLogin = (e: React.FormEvent) => {
+  const handlePhoneLogin = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // Validate phone number
     if (!phoneNumber.trim()) return
 
-    const { error } = await supabase.auth.signInWithOtp({
-      phone: phoneNumber,
-    })
-
-
     // Show OTP verification dialog
-    if (error) {
-      console.error("Error sending OTP:", error.message)
-    } else {
     setShowPhoneVerification(true)
   }
 
-  const handleEmailLogin = (e: React.FormEvent) => {
+  const handleEmailLogin = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // Validate email and password
     if (!email.trim() || !password.trim()) return
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
-
     // Handle email login
-    
-    if (error) {
-      console.error("Error logging in:", error.message)
-    } else {
     console.log("Email login:", email, password)
 
     // In a real app, you would call your API here
@@ -199,5 +180,5 @@ export default function LoginPage() {
       />
     </div>
   )
-)
-  }
+}
+
